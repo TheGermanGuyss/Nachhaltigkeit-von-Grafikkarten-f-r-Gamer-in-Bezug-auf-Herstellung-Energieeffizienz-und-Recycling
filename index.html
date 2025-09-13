@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPU Nachhaltigkeit - Für umweltbewusste Gamer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🌱</span>
+                <span>GPU Nachhaltigkeit</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#calculator" class="nav-link">CO2 Rechner</a></li>
+                <li><a href="#manufacturing" class="nav-link">Herstellung</a></li>
+                <li><a href="#efficiency" class="nav-link">Effizienz</a></li>
+                <li><a href="#recycling" class="nav-link">Recycling</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Gaming & Nachhaltigkeit</h1>
+            <p class="hero-subtitle">Entdecke, wie du als Gamer zum Schutz der Umwelt beitragen kannst</p>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="85">0</span>
+                    <span class="stat-label">Millionen Gamer weltweit</span>
+                    <div class="widget-overlay">
+                        <span class="click-hint">Klicken für Details</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="34">0</span>
+                    <span class="stat-label">TWh Stromverbrauch pro Jahr</span>
+                    <div class="widget-overlay">
+                        <span class="click-hint">Klicken für Details</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="24">0</span>
+                    <span class="stat-label">Millionen Tonnen CO2</span>
+                    <div class="widget-overlay">
+                        <span class="click-hint">Klicken für Details</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="gpu-animation">
+                <div class="gpu-card">
+                    <div class="gpu-fans">
+                        <div class="fan fan-1"></div>
+                        <div class="fan fan-2"></div>
+                    </div>
+                    <div class="gpu-lights"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <h2 class="section-title">CO2-Fußabdruck Rechner</h2>
+            <p class="section-subtitle">Berechne den jährlichen CO2-Ausstoß deiner Grafikkarte</p>
+            
+            <div class="calculator-container">
+                <div class="calculator-input">
+                    <div class="input-group">
+                        <label for="gpu-watts">Stromverbrauch deiner GPU (Watt)</label>
+                        <input type="number" id="gpu-watts" min="50" max="600" value="250" placeholder="z.B. 250">
+                        <div class="input-slider">
+                            <input type="range" id="watts-slider" min="50" max="600" value="250">
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="daily-hours">Tägliche Gaming-Zeit (Stunden)</label>
+                        <input type="number" id="daily-hours" min="1" max="24" value="4" placeholder="z.B. 4">
+                        <div class="input-slider">
+                            <input type="range" id="hours-slider" min="1" max="24" value="4">
+                        </div>
+                    </div>
+
+                    <div class="gpu-presets">
+                        <h3>Beliebte GPU-Modelle:</h3>
+                        <div class="preset-buttons">
+                            <button class="preset-btn" data-watts="220">RTX 4060 Ti (220W)</button>
+                            <button class="preset-btn" data-watts="285">RTX 4070 (285W)</button>
+                            <button class="preset-btn" data-watts="320">RTX 4080 (320W)</button>
+                            <button class="preset-btn" data-watts="450">RTX 4090 (450W)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator-result">
+                    <div class="result-card">
+                        <h3>Deine jährlichen CO2-Emissionen</h3>
+                        <div class="co2-display">
+                            <span class="co2-number" id="co2-result">182.5</span>
+                            <span class="co2-unit">kg CO2</span>
+                        </div>
+                        <div class="comparison">
+                            <div class="comparison-item">
+                                <span class="comparison-icon">🚗</span>
+                                <span class="comparison-text">Entspricht <span id="car-km">975</span> km Autofahrt</span>
+                            </div>
+                            <div class="comparison-item">
+                                <span class="comparison-icon">🌳</span>
+                                <span class="comparison-text">Braucht <span id="trees">8</span> Bäume zum Ausgleich</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="efficiency-tips">
+                        <h4>💡 Energiespar-Tipps</h4>
+                        <ul id="tips-list">
+                            <li>Aktiviere V-Sync um unnötige FPS zu begrenzen</li>
+                            <li>Reduziere Grafikeinstellungen wenn möglich</li>
+                            <li>Nutze Energiesparmodi bei Desktop-Nutzung</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="manufacturing" class="manufacturing-section">
+        <div class="container">
+            <h2 class="section-title">Herstellung & Rohstoffe</h2>
+            <div class="manufacturing-grid">
+                <div class="manufacturing-card">
+                    <div class="card-icon">⛏️</div>
+                    <h3>Seltene Erden</h3>
+                    <p>GPUs benötigen seltene Mineralien wie Lithium, Kobalt und Neodym. Der Abbau ist oft umweltschädlich und sozial problematisch.</p>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="75"></div>
+                        <span>75% der Umweltbelastung</span>
+                    </div>
+                    <div class="widget-overlay">
+                        <span class="click-hint">Mehr erfahren</span>
+                    </div>
+                </div>
+
+                <div class="manufacturing-card">
+                    <div class="card-icon">🏭</div>
+                    <h3>Produktion</h3>
+                    <p>Die Chip-Herstellung verbraucht enorme Mengen Wasser und Energie. Ein moderner GPU-Chip benötigt bis zu 2.000 Liter Wasser.</p>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="60"></div>
+                        <span>60% Wasserverbrauch</span>
+                    </div>
+                    <div class="widget-overlay">
+                        <span class="click-hint">Mehr erfahren</span>
+                    </div>
+                </div>
+
+                <div class="manufacturing-card">
+                    <div class="card-icon">🚚</div>
+                    <h3>Transport</h3>
+                    <p>GPUs werden global transportiert - von Asien nach Europa und Amerika. Dies verursacht zusätzliche CO2-Emissionen.</p>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="25"></div>
+                        <span>25% Transport-Emissionen</span>
+                    </div>
+                    <div class="widget-overlay">
+                        <span class="click-hint">Mehr erfahren</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lifecycle-chart">
+                <h3>GPU Lebenszyklus CO2-Emissionen</h3>
+                <div class="chart-container">
+                    <div class="chart-bar" data-height="70">
+                        <span class="bar-value">350kg</span>
+                        <span class="bar-label">Herstellung</span>
+                    </div>
+                    <div class="chart-bar" data-height="100">
+                        <span class="bar-value">500kg</span>
+                        <span class="bar-label">5 Jahre Nutzung</span>
+                    </div>
+                    <div class="chart-bar" data-height="20">
+                        <span class="bar-value">50kg</span>
+                        <span class="bar-label">Entsorgung</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="efficiency" class="efficiency-section">
+        <div class="container">
+            <h2 class="section-title">Energieeffizienz</h2>
+            
+            <div class="efficiency-comparison">
+                <h3>GPU-Generationen Vergleich</h3>
+                <div class="comparison-cards">
+                    <div class="efficiency-card">
+                        <h4>GTX 1080 Ti (2017)</h4>
+                        <div class="efficiency-stats">
+                            <div class="stat">
+                                <span class="stat-label">Leistung</span>
+                                <span class="stat-value">100%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Verbrauch</span>
+                                <span class="stat-value">250W</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Effizienz</span>
+                                <span class="stat-value">0.4</span>
+                            </div>
+                        </div>
+                        <div class="widget-overlay">
+                            <span class="click-hint">Details anzeigen</span>
+                        </div>
+                    </div>
+
+                    <div class="efficiency-card best">
+                        <h4>RTX 4070 (2023)</h4>
+                        <div class="efficiency-badge">Effizienteste</div>
+                        <div class="efficiency-stats">
+                            <div class="stat">
+                                <span class="stat-label">Leistung</span>
+                                <span class="stat-value">120%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Verbrauch</span>
+                                <span class="stat-value">200W</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Effizienz</span>
+                                <span class="stat-value">0.6</span>
+                            </div>
+                        </div>
+                        <div class="widget-overlay">
+                            <span class="click-hint">Details anzeigen</span>
+                        </div>
+                    </div>
+
+                    <div class="efficiency-card">
+                        <h4>RTX 4090 (2023)</h4>
+                        <div class="efficiency-stats">
+                            <div class="stat">
+                                <span class="stat-label">Leistung</span>
+                                <span class="stat-value">200%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Verbrauch</span>
+                                <span class="stat-value">450W</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Effizienz</span>
+                                <span class="stat-value">0.44</span>
+                            </div>
+                        </div>
+                        <div class="widget-overlay">
+                            <span class="click-hint">Details anzeigen</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="power-management">
+                <h3>Smart Power Management</h3>
+                <div class="power-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <h4>Dynamic Voltage Scaling</h4>
+                        <p>Moderne GPUs passen ihre Spannung automatisch an die Belastung an</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎮</div>
+                        <h4>Gaming vs. Desktop</h4>
+                        <p>Energieverbrauch sinkt um bis zu 90% im Desktop-Modus</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">❄️</div>
+                        <h4>Temperatur-Management</h4>
+                        <p>Kühlere GPUs verbrauchen weniger Strom und leben länger</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recycling" class="recycling-section">
+        <div class="container">
+            <h2 class="section-title">Recycling & Entsorgung</h2>
+            
+            <div class="recycling-process">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Sammlung</h3>
+                        <p>Alte GPUs bei zertifizierten Recycling-Partnern abgeben</p>
+                    </div>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Zerlegung</h3>
+                        <p>Manuelle Trennung von Metallen, Kunststoffen und Elektronik</p>
+                    </div>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Aufbereitung</h3>
+                        <p>Rückgewinnung wertvoller Materialien wie Gold, Silber und Kupfer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="materials-recovery">
+                <h3>Materialrückgewinnung aus einer GPU</h3>
+                <div class="materials-grid">
+                    <div class="material-item">
+                        <div class="material-icon">🥇</div>
+                        <span class="material-name">Gold</span>
+                        <span class="material-amount">0.3g</span>
+                        <span class="material-value">~15€</span>
+                    </div>
+                    <div class="material-item">
+                        <div class="material-icon">🥈</div>
+                        <span class="material-name">Silber</span>
+                        <span class="material-amount">2.1g</span>
+                        <span class="material-value">~1.5€</span>
+                    </div>
+                    <div class="material-item">
+                        <div class="material-icon">🔶</div>
+                        <span class="material-name">Kupfer</span>
+                        <span class="material-amount">15g</span>
+                        <span class="material-value">~0.12€</span>
+                    </div>
+                    <div class="material-item">
+                        <div class="material-icon">⚫</div>
+                        <span class="material-name">Kunststoff</span>
+                        <span class="material-amount">120g</span>
+                        <span class="material-value">Recycelbar</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sustainability-tips">
+                <h3>Nachhaltige GPU-Nutzung</h3>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">🔄</div>
+                        <h4>Länger nutzen</h4>
+                        <p>Eine GPU 7 statt 5 Jahre zu nutzen reduziert die Umweltbelastung um 28%</p>
+                    </div>
+                    <div class="widget-overlay">
+                        <span class="click-hint">Mehr Tipps</span>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">💰</div>
+                        <h4>Gebraucht kaufen</h4>
+                        <p>Second-Hand GPUs sparen bis zu 80% der Herstellungsemissionen</p>
+                    </div>
+                    <div class="widget-overlay">
+                        <span class="click-hint">Mehr Tipps</span>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">⚙️</div>
+                        <h4>Undervolting</h4>
+                        <p>Reduziere Spannung bei gleicher Leistung - spart 10-20% Energie</p>
+                    </div>
+                    <div class="widget-overlay">
+                        <span class="click-hint">Mehr Tipps</span>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">🌱</div>
+                        <h4>Ökostrom</h4>
+                        <p>Mit grünem Strom wird deine GPU zu 100% klimaneutral</p>
+                    </div>
+                    <div class="widget-overlay">
+                        <span class="click-hint">Mehr Tipps</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal für detaillierte Informationen -->
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body">
+                <!-- Dynamischer Inhalt wird hier eingefügt -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 GPU Nachhaltigkeit. Für eine grünere Gaming-Zukunft.</p>
+            <p>Daten basieren auf Durchschnittswerten und Studien der Gaming-Industrie.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
